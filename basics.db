@@ -1,0 +1,35 @@
+creating database with a name: 
+
+  
+CTEATE DATABASE toriDB;
+
+droping / deleting database: 
+
+DROP DATABASE toriDB; 
+
+// creating a new database
+CREATE DATABASE toridb;
+
+// using that database i've created earlier
+USE toridb;
+
+// creating the table named 'users'
+CREATE TABLE users(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
+
+// add data to a table: 
+
+INSERT INTO users (name, email) VALUES ('torikus sadik', 'torikussadikk@gmail.com');
+
+// Retrieve data from the table
+SELECT * FROM users;
+
+// edit particular user's data
+UPDATE users SET email = 'tori@gmail.com' WHERE id = 1;
+
+// remove data from the table where id = 1
+DELETE FROM users WHERE id = 1;
